@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  nginx:
+    build: nginx/
+    volumes:
+      - ./nginx/:/usr/share/nginx/html
+
+    ports:
+      - 8080:80
+      - 8081:81
+
+  golangapi:
+        build: golangapi/
